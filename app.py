@@ -76,7 +76,12 @@ st.markdown('<p class="subtitle">Real-time translation powered by AI · Built fo
 languages = {
     "Auto Detect": "auto", "English": "en", "Hindi": "hi", "Kannada": "kn",
     "French": "fr", "Spanish": "es", "German": "de", "Japanese": "ja",
-    "Chinese (Simplified)": "zh-CN", "Arabic": "ar", "Russian": "ru"
+    "Chinese (Simplified)": "zh-CN", "Arabic": "ar", "Russian": "ru",
+    "Tamil": "ta", "Telugu": "te", "Marathi": "mr", "Bengali": "bn",
+    "Gujarati": "gu", "Punjabi": "pa", "Malayalam": "ml", "Urdu": "ur",
+    "Portuguese": "pt", "Italian": "it", "Korean": "ko", "Dutch": "nl",
+    "Turkish": "tr", "Vietnamese": "vi", "Thai": "th", "Indonesian": "id",
+    "Polish": "pl", "Greek": "el", "Hebrew": "iw", "Swedish": "sv"
 }
 target_languages = {k: v for k, v in languages.items() if k != "Auto Detect"}
 
