@@ -7,65 +7,67 @@ st.set_page_config(page_title="Language Translator", page_icon="🌐", layout="w
 
 st.markdown("""
     <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Fira+Code:wght@400;500&display=swap');
+    
+    html, body, [class*="css"] {
+        font-family: 'Poppins', sans-serif;
+    }
     .stApp {
-        background-color: #0d1117;
-        background-image: 
-            linear-gradient(rgba(74,144,226,0.05) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(74,144,226,0.05) 1px, transparent 1px);
-        background-size: 25px 25px;
+        background: radial-gradient(circle at 20% 20%, #1a1a3d 0%, #0d0d1f 45%, #05050f 100%);
     }
     .main-title {
-        font-size: 46px;
+        font-size: 48px;
         font-weight: 800;
         text-align: center;
-        font-family: 'Courier New', monospace;
-        background: linear-gradient(90deg, #58a6ff, #bc8cff);
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(90deg, #58a6ff, #bc8cff, #ff7eb3);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin-bottom: 0px;
     }
     .subtitle {
         text-align: center;
-        color: #8b949e;
+        color: #9aa0b4;
         margin-bottom: 25px;
-        font-size: 14px;
-        font-family: 'Courier New', monospace;
+        font-size: 15px;
+        font-family: 'Poppins', sans-serif;
     }
     div[data-testid="stTextArea"] textarea {
-        background-color: #161b22;
-        border: 1px solid #30363d;
-        border-radius: 10px;
-        color: #c9d1d9;
-        font-family: 'Courier New', monospace;
+        background-color: #14142b;
+        border: 1px solid #2e2e55;
+        border-radius: 12px;
+        color: #e6e6f0;
+        font-family: 'Fira Code', monospace;
     }
     .stButton>button {
-        background: linear-gradient(90deg, #238636, #2ea043);
+        background: linear-gradient(90deg, #4A90E2, #9B59B6);
         color: white;
-        border: 1px solid #2ea043;
-        border-radius: 8px;
+        border: none;
+        border-radius: 10px;
         height: 48px;
         font-weight: 700;
         width: 100%;
-        font-family: 'Courier New', monospace;
+        font-family: 'Poppins', sans-serif;
         transition: 0.3s;
     }
     .stButton>button:hover {
-        box-shadow: 0 0 12px rgba(46,160,67,0.5);
+        transform: scale(1.02);
+        box-shadow: 0 0 15px rgba(88,166,255,0.5);
     }
     .glass-card {
-        background: #161b22;
+        background: #14142b;
         padding: 22px;
-        border-radius: 10px;
+        border-radius: 12px;
         border-left: 3px solid #58a6ff;
-        border: 1px solid #30363d;
-        font-family: 'Courier New', monospace;
-        color: #c9d1d9;
+        border: 1px solid #2e2e55;
+        font-family: 'Fira Code', monospace;
+        color: #e6e6f0;
         margin-top: 15px;
     }
     .stSelectbox div[data-baseweb="select"] {
-        background-color: #161b22;
+        background-color: #14142b;
         border-radius: 8px;
-        border: 1px solid #30363d;
+        border: 1px solid #2e2e55;
     }
     </style>
 """, unsafe_allow_html=True)
@@ -161,7 +163,7 @@ with tab2:
             st.markdown(f"""
             <div class="glass-card">
             <b>{s} → {t}</b><br>
-            <span style="color:#8b949e;">{orig[:60]}{'...' if len(orig)>60 else ''}</span><br>
+            <span style="color:#9aa0b4;">{orig[:60]}{'...' if len(orig)>60 else ''}</span><br>
             <span style="color:#58a6ff;">{trans[:60]}{'...' if len(trans)>60 else ''}</span>
             </div>
             """, unsafe_allow_html=True)
@@ -173,7 +175,7 @@ with tab3:
     <div class="glass-card">
     <h4>About this App</h4>
     <p>A real-time language translator built using Streamlit, Deep Translator, and Google Text-to-Speech.</p>
-    <p><b>Features:</b> Auto language detection, 10+ languages, audio playback, downloadable translations, session history.</p>
+    <p><b>Features:</b> Auto language detection, 30 languages, audio playback, downloadable translations, session history.</p>
     <p><b>Built for:</b> CodeAlpha AI Internship — Task 1</p>
     </div>
     """, unsafe_allow_html=True)
